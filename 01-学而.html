@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>学而</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei", sans-serif;
+}
+.daohang {
+  width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+  gap: 22px;
+}
+.logo {
+  color: #22b983;
+  font-size: 22px;
+  font-weight: bold;
+}
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 13px;
+  margin: 0 10px;
+}
+.nav-link.active {
+  color: #333;
+  border-bottom: 2px solid #e6222b;
+}
+.search-box {
+  display: flex;
+  margin-left: auto;
+}
+.search-input {
+  width: 320px;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-right: none;
+}
+.search-btn {
+  width: 36px;
+  border: none;
+  background-color: #e6222b;
+}
+.circle{
+  width: 34px;
+  height: 34px;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+.out-btn {
+  background-color: #22b983;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 2px;
+}
+
+/* Banner */
+.banner {
+  height: 224px;
+  background-color: #22b983;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: #fff;
+  margin-bottom: 34px;
+}
+.book-left {
+  width: 240px;
+  height: 180px;
+}
+.banner-text h2 {
+  font-size: 35px;
+  margin-bottom: 8px;
+}
+.banner-text p {
+  font-size: 20px;
+  color: #ffdd44;
+}
+.banner-dots {
+  position: absolute;
+  right: 24px;
+  bottom: 18px;
+}
+.dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  margin: 0 3px;
+}
+.dot.active {
+  background: white;
+}
+
+.four-block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 44px;
+}
+.item {
+  width: 23%;
+  text-align: center;
+}
+.circle-title {
+  width: 64px;
+  height: 64px;
+  border: 2px solid #22b983;
+  border-radius: 50%;
+  line-height: 60px;
+  font-size: 24px;
+  color: #22b983;
+  margin: 0 auto 12px;
+}
+.course-list {
+  list-style: disc;
+  list-style-position: inside;
+  font-size: 13px;
+  color: #444;
+  line-height: 1.7;
+}
+.plus-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #22b983;
+  color: #22b983;
+  border-radius: 50%;
+  line-height: 32px;
+  margin: 10px auto 0;
+  font-size: 18px;
+}
+.zhuan{
+    color: #e6222b;
+}
+.gray{
+    color: #666;
+    font-size: 10px;
+   
+}
+
+
+.hot-area {
+  margin-bottom: 46px;
+}
+.hot-area h3 {
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 26px;
+}
+.hot-area h3 span {
+  display: block;
+  font-size: 11px;
+  color: #22b983;
+  margin-top: 4px;
+}
+.hot-wrap {
+  display: flex;
+  flex-direction: column;
+}
+.hot-row {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.hot-card {
+  width: 120px;
+  height: 100px;
+  border: 1px solid #22b983;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  color: #333;
+}
+.hot-card.green {
+  width: 180px;
+  height: 100px;
+  border: 1px solid #22b983;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  background-color: #22b983;
+  color: white;
+  border-color: #22b983;
+}
+.hot-num {
+  font-size: 28px;
+  font-weight: bold;
+  color: #e6222b;
+  text-decoration: underline;
+ 
+}
+
+.guess-area {
+  margin-bottom: 0;
+}
+.guess-area h3 {
+  text-align: center;
+  font-size: 15px;
+  color: #333;
+  margin-bottom: 10px;
+}
+.guess-area h3 span {
+  display: block;
+  font-size: 11px;
+  color: #22b983;
+  margin-top: 4px;
+}
+.rabbit {
+  height: 38px;
+  background: url("") center no-repeat;
+  margin-bottom: 14px;
+}
+.guess-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.guess-card {
+  width: 23%;
+  height: 88px;
+  background-color: #e6222b;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+}
+.guess-card134{
+  background-color: red;
+  width: 23%;
+  height: 88px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  text-align: center;
+}
+
+</style>
+<body>
+  <div class="daohang">
+    <!-- 导航栏 -->
+    <header class="header">
+      <div class="logo">学而</div>
+      <nav class="nav">
+        <a href=" " class="nav-link active">首页</a >
+        <a href="#" class="nav-link">分类查看</a >
+      </nav>
+      <div class="search-box">
+        <input type="text" class="search-input">
+        <button class="search-btn"></button>
+      </div>
+      <div class="circle"></div>
+      <button class="out-btn">退出</button>
+    </header>
+
+    <section class="banner">
+      <div class="book-left"></div>
+      <div class="banner-text">
+        <h2>十大热门课程精选</h2>
+        <p>选课宝典等你来看</p >
+      </div>
+      <div class="banner-dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </section>
+
+    <!-- 四大分类 -->
+    <section class="four-block">
+      <div class="item">
+        <div class="circle-title">公</div>
+        <ul class="course-list">
+          <li>界面与设计应用<br><span class="gray">房子</span></li>
+          <li>java程序编程<br><span class="gray">赵三金</span></li>
+          <li>设计师的自我修养<br><span class="gray">分享课程</span></li>
+        </ul>
+        <div class="plus-btn">+</div>
+      </div>
+      <div class="item">
+        <div class="circle-title">通</div>
+        <ul class="course-list">
+          <li>计算机基础<br><span class="gray">胡弦</span></li>
+          <li>植物观赏学基础<br><span class="gray">韩一尾</span></li>
+          <li>生活常识101<br><span class="gray">分享</span></li>
+        </ul>
+        <div class="plus-btn">+</div>
+      </div>
+      <div class="item">
+        <div class="circle-title">素</div>
+        <ul class="course-list">
+          <li>新生引导课堂<br><span class="gray">开学季</span></li>
+          <li>党课精神研讨课<br><span class="gray">分享课程</span></li>
+          <li>专业方向<br><span class="gray">毕业生</span></li>
+        </ul>
+        <div class="plus-btn">+</div>
+      </div>
+      <div class="item">
+        <div class="circle-title">专</div>
+        <ul class="course-list">
+          <li class="zhuan">影视广告摄影基础<br>分享课程</li>
+          <li>程序员的养成<br><span class="gray">赵多金</span></li>
+          <li>如何让设计师改稿<br><span class="gray">甲方</span></li>
+        </ul>
+        <div class="plus-btn">+</div>
+      </div>
+    </section>
+
+   
+    <section class="hot-area">
+      <h3>最热课程动态 <span>精心为您推荐最佳口碑课程排行NO.1~NO.5</span></h3>
+      <div class="hot-wrap">
+        <div class="hot-row">
+          <div class="hot-card">常勇<br>《化学生活》</div>
+          <div class="hot-num">02</div>
+          <div class="hot-card green">张勇<br>《java语言程序设计》</div>
+          <div class="hot-num">04</div>
+          <div class="hot-card">张国<br>《计算机组装》</div>
+        </div>
+        <div class="hot-row">
+          <div class="hot-num">01</div>
+          <div class="hot-card">李达<br>《大学生语文》</div>
+          <div class="hot-num">03</div>
+          <div class="hot-card">苏燕<br>《视觉语言》</div>
+          <div class="hot-num">05</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="guess-area">
+      <h3>猜你喜欢课程 <span>根据您的浏览记录，推荐相似课程列表</span></h3>
+      <div class="rabbit"></div>
+      <div class="guess-wrap">
+        <div class="guess-card134">《毛泽东思想》<br>赵三金</div>
+        <div class="guess-card">《邓小平理论》<br>胡一薇</div>
+        <div class="guess-card134">《科学发展观》<br>梁非凡</div>
+        <div class="guess-card134">《三个代表》<br>韩一尾</div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
